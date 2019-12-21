@@ -1,0 +1,145 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation */
+#navBar {
+  text-align: right;
+  margin: 0px 10%;
+  background-color: white;
+}
+#navigation {
+  font-size: 14px;
+}
+#navigation a {
+  text-decoration: none;
+  color: black;
+  line-height: 70px;
+  margin: 0 20px;
+}
+label {
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+}
+#toggle {
+  display: none;
+}
+
+/* Hero */
+
+#headline {
+  margin: 15% 23%;
+  text-align: center;
+}
+#headline h1 {
+  font-size: 60px;
+}
+#headline p {
+  font-size: 20px;
+}
+#headline button {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border-color: black;
+  margin-top: 10px;
+}
+
+/* Grid */
+#projectGrid {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 600px 600px 600px;
+  grid-template-areas:
+  "projectOne projectOne projectTwo"
+  "projectThree projectFour projectFour"
+  "projectFive projectFive projectSix"
+  ;
+}
+.projectGridArea {
+  margin: 10px 10px;
+  padding: 15px 15px;
+}
+#projectOne {
+  grid-area: projectOne;
+  background-color: teal;
+}
+#projectTwo {
+  grid-area: projectTwo;
+  background-color:yellow;
+}
+#projectThree {
+  grid-area: projectThree;
+  background-color:yellow;
+}
+#projectFour {
+  grid-area: projectFour;
+  background-color: teal;
+}
+#projectFive {
+  grid-area: projectFive;
+  background-color: teal;
+}
+#projectSix {
+  grid-area: projectSix;
+  background-color:yellow;
+}
+
+/* Footer */
+.Links {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px 10%;
+  font-size: 16px;
+}
+.Links a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Media Query */
+@media only screen and (max-width: 1000px) {
+label {
+  display: block;
+  cursor: pointer; 
+}
+#navigation {
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+#navigation a {
+  display: block;
+  border-bottom: 1px solid #EAEAEB;
+  margin: 0;
+}
+}
+#toggle:checked + #navigation {
+  display: block;
+}
+@media only screen and (max-width: 600px) {
+  #headline {
+    position: static;
+    margin: 20px;
+  }
+  #projectGrid {
+    grid-template-rows: 300px 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "projectOne"
+      "projectTwo"
+      "projectThree"
+      "projectFour"
+      "projectFive"
+      "projectSix"
+    ;
+  }
+  #headline h1 {
+    font-size: 35px;
+  }
+  #headline p {
+    font-size: 16px;
+  }
+}
